@@ -1,0 +1,39 @@
+My Approach
+
+1. Data Preprocessing
+Handling Missing Values: Large negative numbers in the dataset indicate missing values. These were filtered out during preprocessing.
+
+Feature Scaling: Numerical features were scaled using RobustScaler to ensure consistent input for the model.
+
+Categorical Encoding: Categorical features were encoded using a custom RobustLabelEncoder.
+
+Outlier Detection: Outliers were identified and analyzed using the Interquartile Range (IQR) method.
+
+2. Model Training
+Algorithm Selection: I used an XGBoost Classifier due to its robustness and ability to handle noisy data.
+
+Hyperparameter Tuning: The model was trained with optimized hyperparameters, including n_estimators=850, max_depth=6, and learning_rate=0.15.
+
+Cross-Validation: The model was validated using 5-fold cross-validation to ensure generalizability.
+
+3. Model Evaluation
+Learning Curves: Learning curves were plotted to analyze the model's performance with varying training set sizes.
+
+Confusion Matrix: A confusion matrix was generated to evaluate classification performance.
+
+ROC Curve: Multiclass ROC curves were plotted to assess the model's ability to distinguish between classes.
+
+Precision-Recall Curve: Precision-recall curves were plotted to evaluate the trade-off between precision and recall for each class.
+
+4. Prediction Pipeline
+Test Data Processing: The test dataset underwent the same preprocessing steps as the training data.
+
+Prediction: The trained model was used to predict the class labels for the test dataset.
+
+Submission File: Predictions were saved in submission.csv with columns Planet_ID and Predicted_Class.
+
+Conclusion:
+
+Model Performance: The model achieved a validation accuracy of 88.91% .
+
+Challenges: The dataset's noise and missing values posed significant challenges, but robust preprocessing techniques helped mitigate these issues.
