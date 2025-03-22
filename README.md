@@ -40,31 +40,21 @@ The transmitted classifications are as follows, but their meanings remain unclea
 9. Hohestrahlung
 10. Toterahswelt
 
-Repository Structure
-
-cosmic-classifier/
-├── data/
-│   ├── cosmicclassifierTraining.csv  # Training dataset
-│   └── cosmictest.csv                # Test dataset (provided during Round 2)
-├── notebooks/
-│   └── cosmicClassifierCode.ipynb      # Main Python notebook with code and explanations
-├── submission/
-│   └── submission.csv                # Final predictions for the test set
-├── models/
-│   ├── imputer.joblib                # Saved imputer for preprocessing
-│   ├── scaler.joblib                 # Saved scaler for preprocessing
-│   ├── label_encoders.joblib         # Saved label encoders for categorical features
-│   └── xgb_model_YYYYMMDD.joblib     # Trained XGBoost model
-├── README.md                         # This file
-└── requirements.txt                  # Python dependencies
 
 
 How to Replicate My Results
+
 1.Clone the repository:
+
 git clone https://github.com/your-username/cosmic-classifier.git
 cd cosmic-classifier
+
 2.Install dependencies:
+
 pip install -r requirements.txt
+
 3.Open the Jupyter notebook:
+
 jupyter notebook notebooks/cosmic_classifier.ipynb
+
 4.Run the notebook cells to preprocess data, train the model, and generate predictions.
