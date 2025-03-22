@@ -37,3 +37,34 @@ Conclusion:
 Model Performance: The model achieved a validation accuracy of 88.91% .
 
 Challenges: The dataset's noise and missing values posed significant challenges, but robust preprocessing techniques helped mitigate these issues.
+
+Alternative Approaches
+
+While XGBoost was my primary choice for the COSMIC CLASSIFIER challenge, I also considered other algorithms to ensure the best model was selected. Here’s a brief overview:
+
+1. Random Forest
+Why Considered: Robust, handles noisy data, and provides feature importance.
+
+Why Not Chosen: XGBoost performed better in terms of accuracy and speed.
+
+2. Neural Networks
+Why Considered: Powerful for capturing complex, non-linear relationships.
+
+Why Not Chosen: Prone to overfitting on small, noisy datasets and harder to interpret.
+
+3. Logistic Regression
+Why Considered: Simple and interpretable baseline model.
+
+Why Not Chosen: Assumes linear relationships, which don’t fit the dataset’s complexity.
+
+4. Support Vector Machines (SVM)
+Why Considered: Effective for high-dimensional data and non-linear relationships.
+
+Why Not Chosen: Computationally expensive and didn’t outperform XGBoost.
+
+5. LightGBM
+Why Considered: Faster training times and efficient for large datasets.
+
+Why Not Chosen: XGBoost was more robust to noisy data and performed better on this dataset.
+
+XGBoost emerged as the best choice due to its balance of performance, robustness, and interpretability, making it ideal for decoding Dr. Klaus Reinhardt’s corrupted data.
