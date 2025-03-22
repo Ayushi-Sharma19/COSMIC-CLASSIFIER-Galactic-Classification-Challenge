@@ -1,0 +1,19 @@
+In this blog, I’ll walk through my approach to solving the COSMIC CLASSIFIER challenge. The goal was to classify planets into one of ten categories based on their attributes, using a machine learning model.
+
+Step 1: Understanding the Data
+The dataset contains 10 features describing each planet, such as atmospheric density, surface temperature, and water content. However, the data was noisy and contained missing values, which I handled during preprocessing.
+
+Step 2: Preprocessing the Data
+I started by filtering out missing values, which were represented by large negative numbers. Next, I scaled the numerical features using RobustScaler to ensure consistent input for the model. Categorical features were encoded using a custom RobustLabelEncoder. Finally, I identified and analyzed outliers using the IQR method.
+
+Step 3: Training the Model
+I chose an XGBoost Classifier for its ability to handle noisy data and its interpretability. I used cross-validation to tune hyperparameters and ensure the model’s robustness.
+
+Step 4: Evaluating the Model
+I evaluated the model using learning curves, a confusion matrix, ROC curves, and precision-recall curves. These visualizations helped me understand the model's performance and identify areas for improvement.
+
+Step 5: Making Predictions
+Once the model was trained, I preprocessed the test data and used the model to predict the class labels. The predictions were saved in a submission.csv file, which was formatted according to the competition guidelines.
+
+Step 6: Results
+My model achieved an accuracy of 88.91% on the validation set. 
